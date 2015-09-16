@@ -1,0 +1,17 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="assets\scrips\Player Controls\TargetMovement.cs">
+    <Files>
+      <File FileName="Assets\Scrips\Weapons\Missile\MissileMovement.cs" Line="24" Column="24" />
+      <File FileName="Assets\Scrips\Weapons\Missile\MissilePreferences.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scrips\Weapons\Laser\LaserPreferences.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scrips\Player Controls\PlayerButtonControls.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scrips\Util\PrintLog.cs" Line="1" Column="1" />
+      <File FileName="assets\scrips\Player Controls\TargetMovement.cs" Line="51" Column="45" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
