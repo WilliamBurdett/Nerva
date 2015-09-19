@@ -8,6 +8,7 @@ TagManager:
   - Target
   - LocalCache
   - Weapon
+  - Player
   layers:
   - Default
   - TransparentFX
