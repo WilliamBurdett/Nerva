@@ -17,8 +17,4 @@ public class MissilePreferences : MonoBehaviour {
 			.GetComponent<TargetMovement>()
 			.getSpeed());
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	}
 }

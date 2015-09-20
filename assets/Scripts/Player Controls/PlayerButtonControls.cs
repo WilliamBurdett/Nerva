@@ -9,6 +9,8 @@ public class PlayerButtonControls : NetworkBehaviour {
 	public Transform leftLaser;
 	private float laserDelay;
 	private float laserOffset=0f;
+	private float missileDelay;
+	private float missileOffset = 1f;
 
 	public void setLaserDelay(float laserDelay){
 		this.laserDelay = laserDelay; 
@@ -27,9 +29,12 @@ public class PlayerButtonControls : NetworkBehaviour {
 					NetworkServer.Spawn(rightLaserObject);
 				}
 			}
+			missileOffset += Time.deltaTime;
 			if(Input.GetButton("B_Button") || Input.GetKeyDown(KeyCode.B)){
-				GameObject missileObject = (GameObject)Instantiate(missile, transform.position, transform.rotation);
-				NetworkServer.Spawn (missileObject);
+				if(missileOffset >= missileDelay){
+					GameObject missileObject = (GameObject)Instantiate(missile, transform.position, transform.rotation);
+					NetworkServer.Spawn (missileObject);
+				}
 			}
 		}
 

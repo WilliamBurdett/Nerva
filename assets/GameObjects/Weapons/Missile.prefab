@@ -11,6 +11,7 @@ GameObject:
   - 114: {fileID: 11442778}
   - 114: {fileID: 11429804}
   - 114: {fileID: 11476502}
+  - 114: {fileID: 11408288}
   m_Layer: 0
   m_Name: Missile
   m_TagString: Weapon
@@ -109,6 +110,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11408288
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 123542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 529693eb3e5b143ee88c75f51c547b78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11429804
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -121,8 +133,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyDistance: 500
-  missileSpeed: 50
-  missileDropTime: .5
+  missileSpeed: 75
+  missileDropTime: 1
 --- !u!114 &11442778
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -175,7 +187,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: missileSpeed
-      value: 50
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: destroyDistance
@@ -183,7 +195,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: missileDropTime
-      value: .5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_TagString

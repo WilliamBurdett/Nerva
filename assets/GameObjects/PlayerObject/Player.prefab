@@ -502,7 +502,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laser: {fileID: 100848, guid: 8d79b1e6748214f1eb074ae16951e974, type: 2}
-  missile: {fileID: 0}
+  missile: {fileID: 123542, guid: 67fa5845fbcac4c259b483f4b81c33e3, type: 2}
   rightLaser: {fileID: 401472}
   leftLaser: {fileID: 468062}
 --- !u!114 &11481560
@@ -686,6 +686,10 @@ Prefab:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: missile
+      value: 
+      objectReference: {fileID: 123542, guid: 67fa5845fbcac4c259b483f4b81c33e3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 137936}
