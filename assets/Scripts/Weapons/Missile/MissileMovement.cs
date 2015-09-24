@@ -17,8 +17,8 @@ public class MissileMovement : NetworkBehaviour {
 	}
 
 	private GameObject findTarget(){
-		GameObject[] players = GameObject.FindGameObjectsWithTag ("Player");
 		target = null;
+        ArrayList players = LocalGameCache.getOtherPlayers();
 		foreach (GameObject player in players){
 			if(player.transform.position!=LocalGameCache.localPlayer.gameObject.transform.position){
 				target = player;

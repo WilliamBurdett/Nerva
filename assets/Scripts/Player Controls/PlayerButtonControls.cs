@@ -12,14 +12,19 @@ public class PlayerButtonControls : NetworkBehaviour {
 	private float missileDelay;
 	private float missileOffset = 1f;
 
-	public void setLaserDelay(float laserDelay){
-		this.laserDelay = laserDelay; 
-	}
+    public void setLaserDelay(float laserDelay) {
+        this.laserDelay = laserDelay;
+    }
 
-	// Update is called once per frame
-	void Update () {
+    public void setMissileDelay(float missileDelay) {
+        this.missileDelay = missileDelay;
+    }
+
+    // Update is called once per frame
+    void Update () {
 		if (isLocalPlayer) {
-			laserOffset += Time.deltaTime;
+            laserOffset += Time.deltaTime;
+            missileOffset += Time.deltaTime;
 			if (Input.GetButtonDown ("A_Button") || Input.GetKeyDown(KeyCode.Space)) {
 				if(laserOffset >= laserDelay){
 					laserOffset=0f;
@@ -30,14 +35,13 @@ public class PlayerButtonControls : NetworkBehaviour {
 				}
 			}
 			missileOffset += Time.deltaTime;
-			if(Input.GetButton("B_Button") || Input.GetKeyDown(KeyCode.B)){
+			if(Input.GetButtonDown("B_Button") || Input.GetKeyDown(KeyCode.B)){
 				if(missileOffset >= missileDelay){
-					GameObject missileObject = (GameObject)Instantiate(missile, transform.position, transform.rotation);
+                    missileOffset = 0f;
+                    GameObject missileObject = (GameObject)Instantiate(missile, transform.position, transform.rotation);
 					NetworkServer.Spawn (missileObject);
 				}
 			}
 		}
-
-	
 	}
 }
