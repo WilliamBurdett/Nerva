@@ -12,9 +12,5 @@ public class MissilePreferences : MonoBehaviour {
 		GetComponent<DestroyOnDistance> ().setMaxDistance (destroyDistance);
 		GetComponent<MissileMovement> ().setMissileDropTime (missileDropTime);
 		GetComponent<MissileMovement> ().setMissleSpeed (missileSpeed);
-		GetComponent<MissileMovement>().setMissileInitialSpeed(
-			LocalGameCache.localTarget
-			.GetComponent<TargetMovement>()
-			.getSpeed());
 	}
 }

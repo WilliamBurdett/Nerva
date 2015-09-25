@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Networking;
 
-public class DestroyOnDistance : MonoBehaviour {
+public class DestroyOnDistance : NetworkBehaviour {
 	private Vector3 startPosition;
 	private float maxDistance;
 
@@ -16,8 +17,11 @@ public class DestroyOnDistance : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Vector3.Distance (startPosition, transform.position) > maxDistance) {
-			GameObject.Destroy(this.gameObject);
-		}
+        if(isServer) {
+            if(Vector3.Distance(startPosition,transform.position) > maxDistance) {
+
+                Network.Destroy(this.gameObject);
+            }
+        }
 	}
 }

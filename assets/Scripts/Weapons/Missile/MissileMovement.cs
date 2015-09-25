@@ -50,16 +50,18 @@ public class MissileMovement : NetworkBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (dropped==true && target!=null) {
-			chaseTarget ();
-		} else if (spawnTime + missileDropTime < Time.time && dropped == false && target==null) {
-			dropped = true;
-			target = findTarget ();
-			transform.Translate(Vector3.forward * missileInitialSpeed * Time.deltaTime);
-			transform.Translate(Vector3.down * missileDropSpeed * Time.deltaTime);
-		} else {
-			transform.Translate(Vector3.forward * missileInitialSpeed * Time.deltaTime);
-			transform.Translate(Vector3.down * missileDropSpeed * Time.deltaTime);
-		}
+        if(isServer) {
+            if(dropped==true && target!=null) {
+                chaseTarget();
+            } else if(spawnTime + missileDropTime < Time.time && dropped == false && target==null) {
+                dropped = true;
+                target = findTarget();
+                transform.Translate(Vector3.forward * missileInitialSpeed * Time.deltaTime);
+                transform.Translate(Vector3.down * missileDropSpeed * Time.deltaTime);
+            } else {
+                transform.Translate(Vector3.forward * missileInitialSpeed * Time.deltaTime);
+                transform.Translate(Vector3.down * missileDropSpeed * Time.deltaTime);
+            }
+        }
 	}
 }

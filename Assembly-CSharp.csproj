@@ -50,12 +50,12 @@
      <Compile Include="assets\Scripts\Player Controls\LookAtTransform.cs" />
      <Compile Include="assets\Scripts\Player Controls\PlayerButtonControls.cs" />
      <Compile Include="assets\Scripts\Player Controls\PlayerPreferences.cs" />
-     <Compile Include="assets\Scripts\Player Controls\PlayerSyncPosition.cs" />
      <Compile Include="assets\Scripts\Player Controls\SmoothFollow.cs" />
      <Compile Include="assets\Scripts\Player Controls\TargetMovement.cs" />
      <Compile Include="assets\Scripts\Scene\LevelPreferencesScript.cs" />
      <Compile Include="assets\Scripts\Scene\LocalGameCache.cs" />
      <Compile Include="assets\Scripts\Util\PrintLog.cs" />
+     <Compile Include="assets\Scripts\Util\SyncPosition.cs" />
      <Compile Include="assets\Scripts\Weapons\DestroyOnDistance.cs" />
      <Compile Include="assets\Scripts\Weapons\Laser\LaserPreferences.cs" />
      <Compile Include="assets\Scripts\Weapons\LerpFollow.cs" />
